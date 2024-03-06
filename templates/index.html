@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Cancer Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thyroid Cancer Detection System</h1>
+    </header>
+    <section id="about">
+        <h2>About Thyroid Cancer</h2>
+        <p>Thyroid cancer is a type of cancer that originates from the thyroid gland, a butterfly-shaped gland located at the base of your neck. It is relatively rare compared to other types of cancer but can be serious if not treated early.</p>
+        <p>Common symptoms of thyroid cancer include a lump or swelling in the neck, difficulty swallowing, persistent hoarseness, and changes in voice.</p>
+        <p>Early detection and treatment of thyroid cancer can greatly improve outcomes and reduce the risk of complications.</p>
+    </section>
+    <section id="prevention">
+        <h2>Prevention</h2>
+        <p>While the exact cause of thyroid cancer is not known, there are steps you can take to reduce your risk:</p>
+        <ul>
+            <li>Regularly check your neck for any lumps or swelling.</li>
+            <li>Avoid exposure to radiation whenever possible.</li>
+            <li>Eat a healthy diet rich in fruits, vegetables, and whole grains.</li>
+            <li>Limit your intake of processed foods and sugary drinks.</li>
+            <li>Exercise regularly and maintain a healthy weight.</li>
+        </ul>
+    </section>
+    <button id="detectBtn">Detect Thyroid Cancer</button>
+    <section id="data" class="hidden">
+        <h2>Thyroid Cancer Dataset</h2>
+        <table id="datasetTable">
+        </table>
+    </section>
+    <section id="prediction" class="hidden">
+        <h2>Prediction Results</h2>
+        <p id="predictionResult"></p>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        document.getElementById('detectBtn').addEventListener('click', function() {
+            window.location.href = '/prediction';
+        });
+    </script>
+</body>
+</html>

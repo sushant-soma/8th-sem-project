@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prediction Results</h1>
+    </header>
+    <section id="data" class="hidden">
+        <h2 id="selected-heading"></h2>
+        <table id="selected-table" class="prediction-table">
+            <thead>
+                <tr>
+                    <th>Total Serum Thyroxin</th>
+                    <th>Total Serum Triiodothyronine</th>
+                    <th>Thyroid Cancer</th>
+                </tr>
+            </thead>
+            <tbody id="selected-body">
+            </tbody>
+        </table>
+    </section>
+    <button id="viewTestDataBtn" class="view-btn">Upload input data file (.csv)</button>
+    <button id="viewTrainingDataBtn" class="view-btn">View Training Data</button>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
